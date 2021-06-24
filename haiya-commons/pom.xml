@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>haiya-microservices-platform</artifactId>
+        <groupId>com.haiya</groupId>
+        <version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>haiya-commons</artifactId>
+    <packaging>pom</packaging>
+    <description>通用组件</description>
+
+    <modules>
+        <module>haiya-redis-spring-boot-starter</module>
+        <module>haiya-common-core</module>
+        <module>haiya-log-spring-boot-starter</module>
+        <module>haiya-db-spring-boot-starter</module>
+        <module>haiya-common-spring-boot-starter</module>
+        <module>haiya-elasticsearch-spring-boot-starter</module>
+        <module>haiya-oss-spring-boot-starter</module>
+        <module>haiya-ribbon-spring-boot-starter</module>
+        <module>haiya-redis-spring-boot-starter</module>
+        <module>haiya-sentinel-spring-boot-starter</module>
+        <module>haiya-zookeeper-spring-boot-starter</module>
+        <module>haiya-swagger2-spring-boot-starter</module>
+    </modules>
+</project>

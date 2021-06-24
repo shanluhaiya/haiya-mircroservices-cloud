@@ -1,0 +1,10 @@
+org.springframework.context.ApplicationContextInitializer=\
+com.haiya.log.config.TtlMDCAdapterInitializer
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.haiya.log.config.LogAutoConfigure,\
+com.haiya.log.service.impl.LoggerAuditServiceImpl,\
+com.haiya.log.service.impl.DbAuditServiceImpl,\
+com.haiya.log.aspect.AuditLogAspect,\
+com.haiya.log.trace.WebTraceFilter,\
+com.haiya.log.trace.FeignTraceInterceptor

@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.haiya.ribbon.RibbonAutoConfigure,\
+com.haiya.ribbon.FeignAutoConfigure,\
+com.haiya.ribbon.RestTemplateAutoConfigure,\
+com.haiya.ribbon.filter.LbIsolationFilter,\
+com.haiya.ribbon.LbIsolationAutoConfigure
