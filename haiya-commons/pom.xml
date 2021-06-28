@@ -25,5 +25,6 @@
         <module>haiya-sentinel-spring-boot-starter</module>
         <module>haiya-zookeeper-spring-boot-starter</module>
         <module>haiya-swagger2-spring-boot-starter</module>
+        <module>haiya-auth-client-spring-boot-starter</module>
     </modules>
 </project>

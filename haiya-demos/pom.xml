@@ -13,21 +13,11 @@
     <packaging>pom</packaging>
     <modules>
         <module>basic-demo</module>
+        <module>security-springmvc</module>
     </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.haiya</groupId>
-            <artifactId>haiya-common-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.haiya</groupId>
-            <artifactId>haiya-log-spring-boot-starter</artifactId>
-        </dependency>
-    </dependencies>
 </project>

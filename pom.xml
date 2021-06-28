@@ -9,6 +9,14 @@
     <modules>
         <module>haiya-commons</module>
         <module>haiya-demos</module>
+        <module>haiya-config</module>
+        <module>haiya-gateway</module>
+<!--        <module>haiya-uaa</module>-->
+        <module>haiya-uaa</module>
+        <module>haiya-transaction</module>
+        <module>haiya-monitor</module>
+        <module>haiya-business</module>
+        <module>haiya-web</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -146,6 +154,21 @@
             <dependency>
                 <groupId>com.haiya</groupId>
                 <artifactId>haiya-swagger2-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.haiya</groupId>
+                <artifactId>haiya-auth-client-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.haiya</groupId>
+                <artifactId>haiya-sc-config</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.haiya</groupId>
+                <artifactId>search-client</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <!-- eof 自定义starter -->

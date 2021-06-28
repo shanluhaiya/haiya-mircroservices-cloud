@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.haiya.oauth2.config.SecurityPropertiesConfig,\
+com.haiya.oauth2.store.AuthDbTokenStore,\
+com.haiya.oauth2.store.AuthRedisTokenStore,\
+com.haiya.oauth2.store.AuthJwtTokenStore,\
+com.haiya.oauth2.store.ResJwtTokenStore

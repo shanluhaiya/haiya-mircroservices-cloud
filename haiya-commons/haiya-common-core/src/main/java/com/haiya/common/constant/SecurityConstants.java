@@ -113,6 +113,7 @@ public interface SecurityConstants {
     /**
      * haiya公共前缀
      */
+    String ZTL_PRFIX = "ztl:";
     String HY_PREFIX = "haiya:";
     /**
      * 缓存client的redis key，这里是hash结构存储
@@ -166,5 +167,5 @@ public interface SecurityConstants {
     /**
      * 令牌颁发者
      */
-    String ISS = "http://zlt2000.cn";
+    String ISS = "http://qiaoguoqiang.cn";
 }
