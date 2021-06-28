@@ -7,12 +7,22 @@
         <groupId>com.haiya</groupId>
         <version>0.0.1</version>
     </parent>
-    <packaging>war</packaging>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-security-demo</artifactId>
+    <artifactId>security-spring-security</artifactId>
 
     <dependencies>
+        <!-- bof 新增依赖 -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+        </dependency>
+        <!-- eof 新增依赖 -->
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
