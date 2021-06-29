@@ -14,7 +14,8 @@
     <modules>
         <module>basic-demo</module>
         <module>security-springmvc</module>
-        <module>security-spring-security</module>
+        <module>springboot-security</module>
+        <module>spring-spring-security</module>
     </modules>
 
     <properties>

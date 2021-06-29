@@ -1,8 +1,8 @@
-package com.haiya.security.init;
+package com.haiya.spring.init;
 
-import com.haiya.security.config.ApplicationConfig;
-import com.haiya.security.config.WebConfig;
-import com.haiya.security.config.WebSecurityConfig;
+import com.haiya.spring.config.ApplicationConfig;
+import com.haiya.spring.config.WebConfig;
+import com.haiya.spring.config.WebSecurityConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class SpringApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {

@@ -1,4 +1,4 @@
-package com.haiya.security.config;
+package com.haiya.spring.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -16,10 +16,14 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.haiya.security"
+@ComponentScan(basePackages = "com.haiya.spring"
     , includeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION, value = Controller.class)})
 public class WebConfig implements WebMvcConfigurer {
-    // 配置视图解析器
+
+    /**
+     * 配置视图解析器
+     * @return
+     */
     @Bean
     public InternalResourceViewResolver viewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
@@ -28,13 +32,8 @@ public class WebConfig implements WebMvcConfigurer {
         return viewResolver;
     }
 
-
-    /**
-     * 默认Url根路径跳转到/login，此url为spring security提供
-     * @param registry
-     */
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("redirect:/login");
+        registry.addViewController("/").setViewName("redirect:login");
     }
 }

@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: springboot-security
+
+  mvc:
+    view:
+      prefix: /WEB-INF/views
+      suffix: .jsp
+#  security:
+#    user:
+#      name: admin
+#      password: 123

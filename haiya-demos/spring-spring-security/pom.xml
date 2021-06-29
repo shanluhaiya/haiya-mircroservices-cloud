@@ -7,9 +7,9 @@
         <groupId>com.haiya</groupId>
         <version>0.0.1</version>
     </parent>
+    <packaging>war</packaging>
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>security-spring-security</artifactId>
+    <artifactId>spring-spring-security</artifactId>
 
     <dependencies>
         <!-- bof 新增依赖 -->
