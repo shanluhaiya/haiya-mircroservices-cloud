@@ -16,6 +16,9 @@
         <module>security-springmvc</module>
         <module>springboot-security</module>
         <module>spring-spring-security</module>
+        <module>haiya-springcloud-security</module>
+        <module>springboot-security-custom</module>
+        <module>springboot-security-jdbc</module>
     </modules>
 
     <properties>

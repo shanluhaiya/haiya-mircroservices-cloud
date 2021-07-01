@@ -39,6 +39,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+                .csrf().disable() // 点击自定义登录页面后跳转403的原因及解决方式
                 .authorizeRequests()
                 .antMatchers("/r/r1").hasAnyAuthority("p1")
                 .antMatchers("/r/r2").hasAnyAuthority("p2")
@@ -46,6 +47,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().permitAll()
                 .and()
                 .formLogin()
+                .loginPage("/login-view")
+                .loginProcessingUrl("/login")
                 .successForwardUrl("/login-success")
         ;
     }

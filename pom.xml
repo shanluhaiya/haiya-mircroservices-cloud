@@ -69,6 +69,8 @@
         <dubbo.version>2.7.8</dubbo.version>
         <curator.version>5.1.0</curator.version>
         <slf4j.version>1.7.30</slf4j.version>
+        <javax.interceptor-api.version>1.2</javax.interceptor-api.version>
+        <fastjson.version>1.2.75</fastjson.version>
     </properties>
 
     <dependencies>
@@ -184,6 +186,18 @@
                 <artifactId>jjwt</artifactId>
                 <version>${jjwt.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.interceptor</groupId>
+                <artifactId>javax.interceptor-api</artifactId>
+                <version>${javax.interceptor-api.version}</version>
+            </dependency>
+
             <!-- druid 官方 starter -->
             <dependency>
                 <groupId>com.alibaba</groupId>
