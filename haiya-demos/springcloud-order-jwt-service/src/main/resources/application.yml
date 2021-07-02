@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: springcloud-order-service
+  main:
+    allow-bean-definition-overriding: true
+
+server:
+  port: 53021
+  servlet:
+    context-path: /order

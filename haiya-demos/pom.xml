@@ -21,6 +21,7 @@
         <module>springboot-security-custom</module>
         <module>springboot-security-jdbc</module>
         <module>springcloud-order-service</module>
+        <module>springcloud-order-jwt-service</module>
     </modules>
 
     <properties>
