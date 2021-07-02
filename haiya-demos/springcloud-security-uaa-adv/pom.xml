@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>haiya-springcloud-security</artifactId>
+    <artifactId>springcloud-security-uaa-adv</artifactId>
 
     <dependencies>
         <dependency>

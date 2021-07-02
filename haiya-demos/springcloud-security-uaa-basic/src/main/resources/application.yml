@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: uaa-server-demo
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/oauth2_learning?useUnicode=true
+    username: learning
+    password: Lear@2021
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 53020
+  servlet:
+    context-path: /uaa
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info,env
