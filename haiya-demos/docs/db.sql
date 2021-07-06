@@ -91,13 +91,13 @@ CREATE TABLE `oauth_client_details`  (
 
 INSERT INTO `oauth_client_details` VALUES
 ('c1', 'res1',
-'$2a$10$NlBC84MVb7F95EXYTXwLneXgCca6/GipyWR5NHm8K0203bSQMLpvm', 'ROLE_ADMIN,ROLE_USER,ROLE_API',
+'$2a$10$7i/kVE7wzc51xiSlXkfvC.Z1J0mT0AolhmzM6UoVL/jmteRkjxvwy', 'ROLE_ADMIN,ROLE_USER,ROLE_API',
 'client_credentials,password,authorization_code,implicit,refresh_token', 'http://www.baidu.com',
 NULL, 7200, 259200, NULL, NOW(), 0, 0, 'false');
 
 INSERT INTO `oauth_client_details` VALUES
 ('c2', 'res2',
-'$2a$10$NlBC84MVb7F95EXYTXwLneXgCca6/GipyWR5NHm8K0203bSQMLpvm', 'ROLE_API',
+'$2a$10$7i/kVE7wzc51xiSlXkfvC.Z1J0mT0AolhmzM6UoVL/jmteRkjxvwy', 'ROLE_API',
 'client_credentials,password,authorization_code,implicit,refresh_token', 'http://www.baidu.com',
 NULL, 31536000, 2592000, NULL, NOW(), 0, 0, 'false');
 

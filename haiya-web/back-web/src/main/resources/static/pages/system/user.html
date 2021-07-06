@@ -57,7 +57,7 @@
         // 渲染表格
         table.render({
             elem: '#user-table',
-            url: config.base_server + 'api-user/users',
+            url: config.base_server + 'api/user/users',
             method: 'GET',
             headers:{'Authorization': 'Bearer ' + config.getToken().access_token},
             page: true,
@@ -96,7 +96,7 @@
                 layer.confirm('确定重置此用户的密码吗？', function (i) {
                     layer.close(i);
                     layer.load(2);
-                    admin.req('api-user/users/'+obj.data.id+'/password', {}, function (data) {
+                    admin.req('api/user/users/'+obj.data.id+'/password', {}, function (data) {
                         layer.closeAll('loading');
                         if (data.resp_code == 0) {
                             layer.msg(data.resp_msg, {icon: 1, time: 500});
@@ -109,7 +109,7 @@
                 layer.confirm('确定删除此用户吗？', function (i) {
                     layer.close(i);
                     layer.load(2);
-                    admin.req('api-user/users/'+obj.data.id, {}, function (data) {
+                    admin.req('api/user/users/'+obj.data.id, {}, function (data) {
                         layer.closeAll('loading');
                         if (data.resp_code == 0) {
                             layer.msg(data.resp_msg, {icon: 1, time: 500});
@@ -148,7 +148,7 @@
 
         // 导出
         $('#user-btn-export').click(function () {
-            var url = config.base_server + 'api-user/users/export';
+            var url = config.base_server + 'api/user/users/export';
             var xhr = new XMLHttpRequest();
             xhr.open('POST', url, true);
             xhr.responseType = "blob";
@@ -176,7 +176,7 @@
         // 修改user状态
         form.on('switch(user-tpl-state)', function (obj) {
             layer.load(2);
-            admin.req('api-user/users/updateEnabled', {
+            admin.req('api/user/users/updateEnabled', {
                 id: obj.elem.value,
                 enabled: obj.elem.checked ? true : false
             }, function (data) {
@@ -193,7 +193,7 @@
         });
 
         //上传
-        var importUrl = config.base_server + 'api-user/users/import';
+        var importUrl = config.base_server + 'api/user/users/import';
         upload.render({
             elem: '#user-btn-import'
             ,url: importUrl

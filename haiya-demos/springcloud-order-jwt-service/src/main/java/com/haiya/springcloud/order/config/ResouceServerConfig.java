@@ -17,9 +17,9 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
  * @EnableResourceServer 注解自动增加了一个类型为 OAuth2AuthenticationProcessingFilter 的过滤器链
  * @author qiaoguoqiang
  */
-@Configuration
-@EnableResourceServer
-@EnableGlobalMethodSecurity(prePostEnabled = true)
+//@Configuration
+//@EnableResourceServer
+//@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class ResouceServerConfig extends ResourceServerConfigurerAdapter {
     public static final String RESOURCE_ID = "res1";
 

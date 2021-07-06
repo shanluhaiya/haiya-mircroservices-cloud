@@ -231,7 +231,7 @@
         });
         weekChart.showLoading();
 
-        admin.req('api-log/requestStat', {}, function (data) {
+        admin.req('api/log/requestStat', {}, function (data) {
             statData = data;
             $('#pv').html(data.currDate_pv);
             $('#uv').html(data.currDate_uv);

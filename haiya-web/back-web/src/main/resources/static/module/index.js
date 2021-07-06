@@ -37,7 +37,7 @@ layui.define(['config', 'admin', 'layer', 'laytpl', 'element', 'form'], function
     var index = {
         // 渲染左侧菜单栏
         initLeftNav: function () {
-            admin.req('api-user/menus/current', {}, function (data) {
+            admin.req('api/user/menus/current', {}, function (data) {
                 //data = data[1];
                 admin.putTempData("menus",data);
                 var menus = data;
@@ -188,7 +188,7 @@ layui.define(['config', 'admin', 'layer', 'laytpl', 'element', 'form'], function
         // 从服务器获取登录用户的信息
         getUser: function (success) {
             layer.load(2);
-            admin.req('api-user/users/current', {}, function (data) {
+            admin.req('api/user/users/current', {}, function (data) {
                 layer.closeAll('loading');
                 if (data && data.resp_code === 0) {
                     let user = data.datas;
@@ -204,7 +204,7 @@ layui.define(['config', 'admin', 'layer', 'laytpl', 'element', 'form'], function
         },
         //获取菜单
         getMenus: function () {
-            admin.req('api-user/menus/current', {}, function (data) {
+            admin.req('api/user/menus/current', {}, function (data) {
                 admin.putTempData("menus",data);
             }, 'GET');
         },
@@ -221,10 +221,10 @@ layui.define(['config', 'admin', 'layer', 'laytpl', 'element', 'form'], function
 
                         if (accessToken) {
                             isExistsToken = true;
-                            admin.req('api-uaa/oauth/check_token?token='+accessToken, {}, function (data) {
+                            admin.req('api/uaa/oauth/check_token?token='+accessToken, {}, function (data) {
                                 if (data.active) {
                                     let loginPageUrl = window.location.protocol + '//' + window.location.host + '/login.html';
-                                    window.location = config.base_server + 'api-uaa/oauth/remove/token?redirect_uri='+loginPageUrl+'&access_token='+accessToken;
+                                    window.location = config.base_server + 'api/uaa/oauth/remove/token?redirect_uri='+loginPageUrl+'&access_token='+accessToken;
                                 } else {
                                     location.replace('login.html');
                                 }

@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 
 /**
  * @author qiaoguoqiang
@@ -18,12 +19,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable()
+        http
                 .authorizeRequests()
-                //.antMatchers("/r/r1").hasAnyAuthority("p2")
-                //.antMatchers("/r/r2").hasAnyAuthority("p2")
-                .antMatchers("/r/**").authenticated()
-                .anyRequest().permitAll()
+                //.antMatchers("/r/**").authenticated() 开启方法保护，增加Spring配置策略
+                .antMatchers("/r/**").access("#oauth2.hasScope('ROLE_ADMIN')")
+                .and().csrf().disable()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 ;
     }
 }

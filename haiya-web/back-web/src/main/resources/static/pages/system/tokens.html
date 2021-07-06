@@ -35,7 +35,7 @@
         // 渲染表格
         table.render({
             elem: '#tokens-table',
-            url: config.base_server + 'api-uaa/tokens',
+            url: config.base_server + 'api/uaa/tokens',
             method: 'GET',
             headers:{'Authorization': 'Bearer ' + config.getToken().access_token},
             where: {tenantId: config.clientId},
@@ -57,7 +57,7 @@
 
         // 获取应用列表
         layer.load(2);
-        admin.req('api-uaa/clients/all', {}, function (data) {
+        admin.req('api/uaa/clients/all', {}, function (data) {
             layer.closeAll('loading');
             if (0 === data.resp_code) {
                 let selected = false;
@@ -88,7 +88,7 @@
             layer.confirm('确定要删除吗？', function (i) {
                 layer.close(i);
                 layer.load(2);
-                admin.req('api-uaa/oauth/remove/token?token=' + obj.data.tokenValue, {}, function (data) {
+                admin.req('api/uaa/oauth/remove/token?token=' + obj.data.tokenValue, {}, function (data) {
                     layer.closeAll('loading');
                     layer.msg('成功', {icon: 1, time: 500});
                     obj.del();

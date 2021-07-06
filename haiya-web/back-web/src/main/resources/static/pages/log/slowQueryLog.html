@@ -29,7 +29,7 @@
         // 渲染表格
         table.render({
             elem: '#slowQueryLog-table',
-            url: config.base_server + 'api-log/slowQueryLog',
+            url: config.base_server + 'api/log/slowQueryLog',
             method: 'GET',
             headers:{'Authorization': 'Bearer ' + config.getToken().access_token},
             page: true,

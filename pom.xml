@@ -17,6 +17,7 @@
         <module>haiya-monitor</module>
         <module>haiya-business</module>
         <module>haiya-web</module>
+        <module>haiya-discovery</module>
     </modules>
     <packaging>pom</packaging>
 

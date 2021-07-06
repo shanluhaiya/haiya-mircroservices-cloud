@@ -39,7 +39,7 @@
         table.render({
             elem: '#files-table',
             // url: config.base_server + 'user_query.json',
-            url: config.base_server + 'api-file/files',
+            url: config.base_server + 'api/file/files',
             method: 'GET',
             headers:{'Authorization': 'Bearer ' + config.getToken().access_token},
             page: true,
@@ -84,7 +84,7 @@
             layer.confirm('确定要删除吗？', function (i) {
                 layer.close(i);
                 layer.load(2);
-                admin.req('api-file/files/' + obj.data.id, {}, function (data) {
+                admin.req('api/file/files/' + obj.data.id, {}, function (data) {
                     layer.closeAll('loading');
                     if (data.resp_code == 0) {
                         layer.msg(data.resp_msg, {icon: 1, time: 500});

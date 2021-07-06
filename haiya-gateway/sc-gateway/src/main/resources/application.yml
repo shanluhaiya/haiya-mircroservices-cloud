@@ -9,21 +9,9 @@ spring:
         - id: auth
           uri: lb://uaa-server
           predicates:
-            - Path=/api-uaa/**
+            - Path=/api/uaa/**
           filters:
-            - StripPrefix=1
-            - PreserveHostHeader
-        - id: auth-login-page
-          uri: lb://uaa-server
-          predicates:
-            - Path=/login.html
-          filters:
-            - PreserveHostHeader
-        - id: auth-login-process
-          uri: lb://uaa-server
-          predicates:
-            - Path=/user/login
-          filters:
+            - StripPrefix=2
             - PreserveHostHeader
         - id: auth-login-token
           uri: lb://uaa-server
@@ -46,33 +34,33 @@ spring:
         - id: user
           uri: lb://user-center
           predicates:
-            - Path=/api-user/**
+            - Path=/api/user/**
           filters:
-            - StripPrefix=1
+            - StripPrefix=2
         - id: file
           uri: lb://file-center
           predicates:
-            - Path=/api-file/**
+            - Path=/api/file/**
           filters:
-            - StripPrefix=1
+            - StripPrefix=2
         - id: log
           uri: lb://log-center
           predicates:
-            - Path=/api-log/**
+            - Path=/api/log/**
           filters:
-            - StripPrefix=1
+            - StripPrefix=2
         - id: generator
           uri: lb://code-generator
           predicates:
-            - Path=/api-generator/**
+            - Path=/api/generator/**
           filters:
-            - StripPrefix=1
+            - StripPrefix=2
         - id: search
           uri: lb://search-center
           predicates:
-            - Path=/api-search/**
+            - Path=/api/search/**
           filters:
-            - StripPrefix=1
+            - StripPrefix=2
 #    sentinel:
 #      datasource.ds1.nacos:
 #        server-addr: ${spring.cloud.nacos.server-addr}
@@ -93,23 +81,23 @@ haiya:
     ignore:
       # 忽略认证的地址
       httpUrls: >
-        /api-uaa/oauth/**,
-        /api-uaa/validata/**,
-        /api-uaa/css/**,
-        /api-uaa/images/**,
-        /api-uaa/js/**,
+        /api/uaa/oauth/**,
+        /api/uaa/validata/**,
+        /api/uaa/css/**,
+        /api/uaa/images/**,
+        /api/uaa/js/**,
         /login.html,
         /user/login,
-        /api-uaa/tokens/key
+        /api/uaa/tokens/key
     auth:
       urlPermission:
         #是否开启url级别权限
         enable: false
         #配置只进行登录认证，不进行url权限认证的api
         ignoreUrls: >
-          /api-user/menus/current,
-          /api-user/users/current,
-          /api-log/requestStat
+          /api/user/menus/current,
+          /api/user/users/current,
+          /api/log/requestStat
         #白名单
         includeClientIds:
           - webApp

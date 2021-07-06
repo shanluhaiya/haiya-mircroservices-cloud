@@ -31,7 +31,7 @@
         // 渲染表格
         table.render({
             elem: '#index-table',
-            url: config.base_server + 'api-search/admin/indices',
+            url: config.base_server + 'api/search/admin/indices',
             method: 'GET',
             headers:{'Authorization': 'Bearer ' + config.getToken().access_token},
             page: false,
@@ -92,7 +92,7 @@
             layer.confirm('确定要删除吗？', function (i) {
                 layer.close(i);
                 layer.load(2);
-                admin.req('api-search/admin/index?indexName='+obj.data.index, {}, function (data) {
+                admin.req('api/search/admin/index?indexName='+obj.data.index, {}, function (data) {
                     layer.closeAll('loading');
                     if (data.resp_code == 0) {
                         layer.msg(data.resp_msg, {icon: 1, time: 500});

@@ -84,7 +84,7 @@
         form.on('submit(login-submit)', function (obj) {
             layer.load(2);
             $.ajax({
-                url: config.base_server + 'api-uaa/oauth/token',
+                url: config.base_server + 'api/uaa/oauth/token',
                 xhrFields: {
                     withCredentials: true
                 },
@@ -116,7 +116,7 @@
         });
 
         // 图形验证码
-        $('.login-captcha').attr("src", config.base_server + "api-uaa/validata/code/"+uuid);
+        $('.login-captcha').attr("src", config.base_server + "api/uaa/validata/code/"+uuid);
         $('.login-captcha').attr("style", "");
 
         // 图形验证码

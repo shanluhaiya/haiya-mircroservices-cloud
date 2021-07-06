@@ -119,7 +119,7 @@
         // 渲染表格
         table.render({
             elem: '#app-table',
-            url: config.base_server + 'api-uaa/clients/list',
+            url: config.base_server + 'api/uaa/clients/list',
             method: 'GET',
             headers:{'Authorization': 'Bearer ' + config.getToken().access_token},
             page: true,
@@ -160,7 +160,7 @@
             layer.confirm('确定要删除吗？', function (i) {
                 layer.close(i);
                 layer.load(2);
-                admin.req('api-uaa/clients/' + obj.data.id, {}, function (data) {
+                admin.req('api/uaa/clients/' + obj.data.id, {}, function (data) {
                     layer.closeAll('loading');
                     layer.msg('成功', {icon: 1, time: 500});
                     obj.del();
@@ -221,7 +221,7 @@
             });
             data.field.authorizedGrantTypes = authorizedGrantTypesArr.join(",");
             layer.load(2);
-            admin.req('api-uaa/clients/saveOrUpdate', JSON.stringify(data.field), function (data) {
+            admin.req('api/uaa/clients/saveOrUpdate', JSON.stringify(data.field), function (data) {
                 layer.closeAll('loading');
                 if (data.resp_code == 0) {
                     layer.msg(data.resp_msg, {icon: 1, time: 500});

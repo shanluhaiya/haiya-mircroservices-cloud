@@ -92,23 +92,23 @@ public class ValidateCodeServiceImpl implements IValidateCodeService {
      */
     @Override
     public void validate(String deviceId, String validCode) {
-        if (StringUtils.isBlank(deviceId)) {
-            throw new ValidateCodeException("请在请求参数中携带deviceId参数");
-        }
-        String code = this.getCode(deviceId);
-        if (StringUtils.isBlank(validCode)) {
-            throw new ValidateCodeException("请填写验证码");
-        }
-
-        if (code == null) {
-            throw new ValidateCodeException("验证码不存在或已过期");
-        }
-
-        if (!StringUtils.equals(code, validCode.toLowerCase())) {
-            throw new ValidateCodeException("验证码不正确");
-        }
-
-        this.remove(deviceId);
+//        if (StringUtils.isBlank(deviceId)) {
+//            throw new ValidateCodeException("请在请求参数中携带deviceId参数");
+//        }
+//        String code = this.getCode(deviceId);
+//        if (StringUtils.isBlank(validCode)) {
+//            throw new ValidateCodeException("请填写验证码");
+//        }
+//
+//        if (code == null) {
+//            throw new ValidateCodeException("验证码不存在或已过期");
+//        }
+//
+//        if (!StringUtils.equals(code, validCode.toLowerCase())) {
+//            throw new ValidateCodeException("验证码不正确");
+//        }
+//
+//        this.remove(deviceId);
     }
 
     private String buildKey(String deviceId) {

@@ -13,5 +13,6 @@
     <modules>
         <module>sc-gateway</module>
         <module>zuul-gateway</module>
+        <module>haiya-zuul-gateway-oauth2</module>
     </modules>
 </project>
